@@ -144,7 +144,7 @@ El graf de carrers de Barcelona l'obtindrem amb la funció:
 ```python3
 def get_osmnx_graph() -> OsmnxGraph: ... 
 ```
-a on un `OsmnGraph` no és més que:
+a on un `OsmnxGraph` no és més que:
 
 ```python3
 OsmnxGraph : TypeAlias = networkx.MultiDiGraph
