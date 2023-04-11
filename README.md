@@ -185,8 +185,7 @@ Coord : TypeAlias = Tuple[float, float]   # (latitude, longitude)
 i la funció que ens donarà el camí més curt en temps és:
 
 ```python3
-def find_path(ox_g: OsmnxGraph, g: CityGraph, src: Coord, dst: Coord) ->
-Path: ...
+def find_path(ox_g: OsmnxGraph, g: CityGraph, src: Coord, dst: Coord) -> Path: ...
 ```
 
 on `Path` és alguna estructura de dades adient.
