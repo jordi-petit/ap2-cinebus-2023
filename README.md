@@ -102,7 +102,7 @@ A més, la classe `Billboard` ha de proporcionar mètodes per poder-hi cercar in
 
 La funció principal d'aquest mòdul és crear un **graf de busos** a partir de les dades de la informació de les línies d'autobusos i les seves parades. Un graf de busos conté informació sobre les parades, les línies i els trajectes dels autobusos. 
 
-En un graf (dirigit) de busos, els nodes es corresponen a les parades i els arcs als trajectes entres dues parades consecutives d'una mateixa línia de bus. Els nodes han de tenir atributs per desar-hi el nom de la parada, les seves coordenades, ètc. Els arcs han de tenir atributs per desar-hi, per exemple, la línia del bús que els serveix.
+En un graf (no dirigit) de busos, els nodes es corresponen a les parades i els arcs als trajectes entres dues parades consecutives d'una mateixa línia de bus. Els nodes han de tenir atributs per desar-hi el nom de la parada, les seves coordenades, ètc. Els arcs han de tenir atributs per desar-hi, per exemple, la línia del bús que els serveix.
 
 El mòdul `busos` ha d'oferir la funció
 
@@ -131,7 +131,7 @@ La segona desa el graf com una imatge amb el mapa de la ciutat de fons en l'arxi
 
 ## Mòdul `city`
 
-El mòdul `city` és el responsable de proporcionar el **graf de ciutat** que representarà tota la informació necessària per saber anar d'una cruïlla de la ciutat de Barcelona a una altre de la forma més ràpida possible a peu o en bus. El graf de ciutat serà un graf no dirigit resultat de la fusió de dos altres grafs: el graf dels carrers de Barcelona (que proporciona el mòdul `osmnx`) i el graf de metro (que proporciona el mòdul `buses`). El graf de ciutat serà del tipus
+El mòdul `city` és el responsable de proporcionar el **graf de ciutat** que representarà tota la informació necessària per saber anar d'una cruïlla de la ciutat de Barcelona a una altre de la forma més ràpida possible a peu o en bus. El graf de ciutat serà un graf no dirigit resultat de la fusió de dos altres grafs: el graf dels carrers de Barcelona (que proporciona el mòdul `osmnx`) i el graf de busos (que proporciona el mòdul `buses`). El graf de ciutat serà del tipus
 
 ```python3
 CityGraph : TypeAlias = networkx.Graph
